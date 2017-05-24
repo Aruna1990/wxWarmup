@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="userstatus">
+    <view class="user-motto">{{isMoving ? '兔兔我们走' : '动起来试试'}}</view>
+    <image wx:if="{{isMoving}}" src="../../imgs/timg1.gif"></image>
+    <image wx:if="{{!isMoving}}" src="../../imgs/timg.gif"></image>
+  </view>
+</view>

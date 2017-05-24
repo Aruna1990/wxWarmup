@@ -1,0 +1,30 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/location/location",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "MakeSthFun",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#d4237a",
+    "borderStyle": "#d6d6db",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "我",
+      "iconPath": "imgs/cry.png",
+      "selectedIconPath": "imgs/smile.png"
+    }, {
+      "pagePath": "pages/location/location",
+      "text": "轨迹",
+      "iconPath": "imgs/guiji.png",
+      "selectedIconPath": "imgs/guiji-filling.png"
+    }]
+  }
+}

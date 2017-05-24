@@ -1,0 +1,15 @@
+<!--location.wxml-->
+<view class="container">
+        <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" style="width: 100%; height: 300px;"></map>
+        <view>
+            <button class="green" bindtap="handleStart">开始记录</button>
+            <button class="red" bindtap="handleStop">停止记录</button>
+        </view>
+        <view class="logs">
+            <scroll-view scroll-y>
+                <view wx:for="{{markers}}" wx:key="index" id="{{'item-' + index}}" scrollTop="{{0}}" scroll-into-view="{{lastLogId}}">
+                    <view class="badge {{item.speed > 0.5 ? 'green' : ''}} {{item.speed < 0.1 ? 'red' : ''}} {{item.speed < 0.5 && item.speed > 0.1 ? 'yellow' : ''}}"></view><text class="{{}}">{{'(' + item.latitude + ', ' + item.longitude + ')'}}</text>
+                </view>
+            </scroll-view>
+        </view>
+</view>
